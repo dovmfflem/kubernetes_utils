@@ -6,7 +6,7 @@ echo "kubeadm join" > join.sh
 
 echo "10.0.1.116:6443 --token" >> join.sh 
 
-kubeadm token list -o yaml | grep token: | tr -d "token:" >> join.sh
+kubeadm token list -o yaml | grep token: >> join.sh
 
 echo "--discovery-token-ca-cert-hash sha256:" >> join.sh
 
